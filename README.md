@@ -1,3 +1,10 @@
+# Template for REACT app with typescript
+
+**You will need to change the name of your project in `package.json`**  
+Then you will be able to run `npm install`.
+
+----
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
