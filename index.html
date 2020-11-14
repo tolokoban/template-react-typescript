@@ -1,1 +1,48 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>React App</title><link href="/static/css/main.5f361e03.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(e){function t(t){for(var n,l,f=t[0],i=t[1],a=t[2],c=0,s=[];c<f.length;c++)l=f[c],Object.prototype.hasOwnProperty.call(o,l)&&o[l]&&s.push(o[l][0]),o[l]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);for(p&&p(t);s.length;)s.shift()();return u.push.apply(u,a||[]),r()}function r(){for(var e,t=0;t<u.length;t++){for(var r=u[t],n=!0,f=1;f<r.length;f++){var i=r[f];0!==o[i]&&(n=!1)}n&&(u.splice(t--,1),e=l(l.s=r[0]))}return e}var n={},o={1:0},u=[];function l(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,l),r.l=!0,r.exports}l.m=e,l.c=n,l.d=function(e,t,r){l.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,t){if(1&t&&(e=l(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(l.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)l.d(r,n,function(t){return e[t]}.bind(null,n));return r},l.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(t,"a",t),t},l.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},l.p="/";var f=this.webpackJsonptoto=this.webpackJsonptoto||[],i=f.push.bind(f);f.push=t,f=f.slice();for(var a=0;a<f.length;a++)t(f[a]);var p=i;r()}([])</script><script src="/static/js/2.9a1d46a7.chunk.js"></script><script src="/static/js/main.4e329d84.chunk.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="logo192.png"/><link rel="manifest" href="manifest.json"/><style>#SPLASH {
+            background-color: #123;
+        }
+
+        #SPLASH,
+        #SPLASH>* {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: sans-serif;
+            font-size: 5vw;
+            color: #56abff;
+            text-shadow: 0 0 1vw #123, .5vw 0 1vw #123, -.5vw 0 1vw #123, 0 .5vw 1vw #123, 0 -.5vw 1vw #123;
+        }
+
+        @keyframes SPLASH {
+            0% {
+                stroke-dashoffset: -300%;
+            }
+
+            100% {
+                stroke-dashoffset: 450%;
+            }
+        }
+
+        #SPLASH>svg path {
+            animation: SPLASH 2.73s linear infinite;
+        }
+
+        #SPLASH>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #SPLASH>div>div>div {
+            text-align: center;
+        }
+
+        #SPLASH>div>div>div.version {
+            font-size: 50%;
+            opacity: .5;
+        }</style><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#56abff"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="ROOT" class="thm-bg0"></div><div id="SPLASH"><svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveApectRatio="xMidYMid meet" viewBox="-55 -45 110 90"><defs><radialGradient id="grad"><stop offset="0" stop-color="#123" stop-opacity="1"/><stop offset="10%" stop-color="#123" stop-opacity="1"/><stop offset="100%" stop-color="#123" stop-opacity="0"/></radialGradient></defs><path stroke="orange" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="400% 400%" d="M0,0Q10,-30,25,-30,50,-30,50,0 50,30,25,30,10,30,0,0Q-10,-30,-25,-30,-50,-30,-50,0 -50,30,-25,30,-10,30,0,0"/><path stroke="#123" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="400% 400%" d="M0,0Q10,-30,25,-30,50,-30,50,0 50,30,25,30,10,30,0,0Q-10,-30,-25,-30,-50,-30,-50,0 -50,30,-25,30,-10,30,0,0"/><circle r="40" fill="url(#grad)"/></svg><div><div><div class="title">template-react-typesctipt</div><div class="version">0.1.0</div></div></div></div><script src="scr/runtime.8d37d27e19b12fa6a81e.js"></script><script src="scr/libs.e9514b0693a82d0043af.js"></script><script src="scr/app.459fb72d9929cc75029b.js"></script></body></html>
