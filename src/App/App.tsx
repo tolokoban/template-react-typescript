@@ -1,4 +1,5 @@
 import React from "react"
+import Button from 'tfw/view/button'
 
 import "./App.css"
 
@@ -15,6 +16,8 @@ export default class App extends React.Component<IAppProps, IAppState> {
         if (this.props.className) classes.push(this.props.className)
 
         return (<div className={classes.join(' ')}>
+            <p>You are ready to play!</p>
+            <Button icon="play" />
         </div>)
     }
 }
