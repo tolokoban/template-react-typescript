@@ -1,4 +1,19 @@
-# Template for REACT app with typescript and TFW
+# Template for React App with Typescript and TFW
+
+See it live: https://tolokoban.github.io/template-react-typescript/
+
+----
+
+## Install
+
+```bash
+yarn
+```
+ or
+
+```bash
+npm install
+```
 
 **You will need to change the name of your project in `package.json`**  
 Then you will be able to run `npm install` or `yarn`.
