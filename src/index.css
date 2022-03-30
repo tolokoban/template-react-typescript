@@ -19,7 +19,8 @@ code {
         monospace;
 }
 
-#SPLASH.hide {
-    transition: 1s all;
+#tgd-logo.vanish {
     opacity: 0;
+    transition: opacity 0.9s;
 }
+

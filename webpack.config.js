@@ -55,10 +55,6 @@ module.exports = {
         // Open WebBrowser.
         open: true,
         port: process.env.PORT || package.port,
-        proxy: {
-            "/tfw": "http://localhost:60000/",
-            "/css": "http://localhost:60000/",
-        },
     },
     plugins: [
         new CleanWebpackPlugin({
@@ -79,13 +75,20 @@ module.exports = {
         new HtmlWebpackPlugin({
             meta: {
                 viewport:
-                    "width=device-width, initial-scale=1, shrink-to-fit=no",
-                "theme-color": "#56abff",
+                    'width=device-width, initial-scale=1, shrink-to-fit=no',
+                'theme-color': '#56abff',
             },
-            template: "public/index.html",
-            filename: "index.html",
+            template: 'public/index.html',
+            filename: 'index.html',
             title: package.name,
             version: package.version,
+            minify: {
+                collapseInlineTagWhitespace: true,
+                collapseWhitespace: true,
+                decodeEntities: true,
+                minifyCSS: true,
+                removeComments: true,
+            },
         }),
         new WorkboxPlugin.GenerateSW({
             // These options encourage the ServiceWorkers to get in there fast
