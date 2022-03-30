@@ -21,8 +21,10 @@
         "moduleResolution": "node",
         "noImplicitAny": false,
         "noImplicitReturns": false,
+        "noImplicitThis": true,
         "outDir": "./dist/",
         "paths": {
+            "@/*": ["*"],
             "*": ["src/*", "node_modules/*"]
         },
         "removeComments": false,
