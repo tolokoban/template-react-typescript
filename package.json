@@ -15,7 +15,7 @@
     },
     "scripts": {
         "generate": "build-react-routes src/app",
-        "prestart": "npm run generate &",
+        "prestart": "build-react-routes src/app -w &",
         "start": "webpack serve --mode=development",
         "prebuild": "npm run generate",
         "build": "webpack --mode=production",
