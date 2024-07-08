@@ -11,32 +11,32 @@
         "esModuleInterop": true,
         "extendedDiagnostics": false,
         "incremental": false,
-        "jsx": "react",
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "es6"
-        ],
-        "module": "CommonJS",
+        "jsx": "react-jsx",
+        "lib": ["dom", "dom.iterable", "ES6"],
+        "module": "esnext",
         "moduleResolution": "node",
-        "noImplicitAny": false,
-        "noImplicitReturns": false,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
         "noImplicitThis": true,
         "outDir": "./dist/",
         "paths": {
             "@/*": ["*"],
             "*": ["src/*", "node_modules/*"]
         },
-        "removeComments": false,
+        "preserveWatchOutput": false,
+        "removeComments": true,
         "resolveJsonModule": true,
+        "skipLibCheck": true,
         "sourceMap": true,
-        "strict": false,
+        "strict": true,
         "strictNullChecks": true,
-        "target": "es5"
+        "strictPropertyInitialization": true,
+        "target": "ES6"
     },
     "output": ["./dist"],
     "files": ["src/index.tsx"],
     "include": [
+        "./src/**/*.mdx",
         "./src/**/*.ts",
         "./src/**/*.tsx",
         "./src/**/*.css",
@@ -44,12 +44,15 @@
         "./src/**/*.png",
         "./src/**/*.jpg",
         "./src/**/*.jpeg",
-        "./src/**/*.gif"
+        "./src/**/*.gif",
+        "./src/**/*.webp"
     ],
     "exclude": [
+        "_backup_/",
         "node_modules/",
         "doc/",
         "**/*.spec.*",
-        "**/*.test.*"
+        "**/*.test.*",
+        "**/*.SKIP.*"
     ]
 }

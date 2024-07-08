@@ -1,40 +1,38 @@
-import App from "./App"
-import React from "react"
-import ReactDOM from "react-dom"
-import "./index.css"
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { ModalProvider, Theme } from "@tolokoban/ui";
+
+import App from "./app";
+
+import "./index.css";
 
 function start() {
-    console.log("VERSION", React.version)
-    // Use the following as soon as Types are available for React 18.
-    // ReactDOM.createRoot(document.getElementById("ROOT")).render(
-    //     <React.StrictMode>
-    //         <App />
-    //     </React.StrictMode>
-    // )
-    // Create main component.
-    ReactDOM.render(
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>,
-        document.getElementById("root")
-    )
-
-    // Remove splash screen.
-    removeSplashScreen()
+  Theme.apply();
+  const container = document.getElementById("root") as HTMLElement;
+  const root = createRoot(container);
+  root.render(
+    <React.StrictMode>
+      <ModalProvider>
+        <App />
+      </ModalProvider>
+    </React.StrictMode>,
+  );
+  // Remove splash screen.
+  removeSplashScreen();
 }
 
 function removeSplashScreen() {
-    const SPLASH_VANISHING_DELAY = 900
-    const splash = document.getElementById('tgd-logo')
-    if (!splash) return
+  const SPLASH_VANISHING_DELAY = 900;
+  const splash = document.getElementById("tgd-logo");
+  if (!splash) return;
 
-    splash.classList.add('vanish')
-    window.setTimeout(() => {
-        const parent = splash.parentNode
-        if (!parent) return
+  splash.classList.add("vanish");
+  window.setTimeout(() => {
+    const parent = splash.parentNode;
+    if (!parent) return;
 
-        parent.removeChild(splash)
-    }, SPLASH_VANISHING_DELAY)
+    parent.removeChild(splash);
+  }, SPLASH_VANISHING_DELAY);
 }
 
-start()
+void start();
