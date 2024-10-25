@@ -7,7 +7,6 @@ export default function Page() {
             placeItems="center"
             fullsize
             position="absolute"
-            color="neutral-5"
             fontSize="8em"
         >
             <div>Hello world!</div>

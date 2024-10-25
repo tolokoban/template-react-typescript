@@ -82,7 +82,7 @@ const config = (env) => {
             new Webpack.ProgressPlugin(),
             new WebpackShellPluginNext({
                 onBuildStart: {
-                    scripts: ["npm run routes"],
+                    scripts: ["npm run generate"],
                     blocking: true,
                     parallel: false,
                 },
@@ -171,7 +171,7 @@ const config = (env) => {
                     exclude: /node_modules/,
                 },
                 {
-                    test: /\.(png|jpe?g|gif|webp|svg)$/i,
+                    test: /\.(png|jpe?g|gif|webp|avif|svg|mp4)$/i,
                     // More information here https://webpack.js.org/guides/asset-modules/
                     type: "asset",
                     generator: {
