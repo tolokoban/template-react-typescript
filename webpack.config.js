@@ -81,7 +81,7 @@ const config = (env) => {
         plugins: [
             new Webpack.ProgressPlugin(),
             new WebpackShellPluginNext({
-                onBuildStart: {
+                onBeforeCompile: {
                     scripts: ["npm run generate"],
                     blocking: true,
                     parallel: false,
@@ -158,17 +158,25 @@ const config = (env) => {
         },
         module: {
             rules: [
+                // {
+                //     test: /\.tsx?$/,
+                //     use: [
+                //         {
+                //             loader: "ts-loader",
+                //             options: {
+                //                 transpileOnly: false,
+                //             },
+                //         },
+                //     ],
+                //     exclude: /node_modules/,
+                // },
                 {
                     test: /\.tsx?$/,
-                    use: [
-                        {
-                            loader: "ts-loader",
-                            options: {
-                                transpileOnly: false,
-                            },
-                        },
-                    ],
-                    exclude: /node_modules/,
+                    loader: "esbuild-loader",
+                    options: {
+                        loader: "tsx", // Or 'ts' if you don't need tsx
+                        target: "es2015",
+                    },
                 },
                 {
                     test: /\.(png|jpe?g|gif|webp|avif|svg|mp4)$/i,
