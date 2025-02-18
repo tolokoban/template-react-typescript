@@ -5,8 +5,9 @@ const CopyPlugin = require("copy-webpack-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const WebpackShellPluginNext = require("webpack-shell-plugin-next")
 const Webpack = require("webpack")
-
 const Package = require("./package.json")
+
+const USE_ESBUILD = true
 
 const config = (env) => {
     if (typeof Package.port !== "number") {
@@ -158,26 +159,28 @@ const config = (env) => {
         },
         module: {
             rules: [
-                // {
-                //     test: /\.tsx?$/,
-                //     use: [
-                //         {
-                //             loader: "ts-loader",
-                //             options: {
-                //                 transpileOnly: false,
-                //             },
-                //         },
-                //     ],
-                //     exclude: /node_modules/,
-                // },
-                {
-                    test: /\.tsx?$/,
-                    loader: "esbuild-loader",
-                    options: {
-                        loader: "tsx", // Or 'ts' if you don't need tsx
-                        target: "es2015",
-                    },
-                },
+                USE_ESBUILD
+                    ? {
+                          test: /\.tsx?$/,
+                          loader: "esbuild-loader",
+                          options: {
+                              loader: "tsx", // Or 'ts' if you don't need tsx
+                              target: "es2015",
+                          },
+                      }
+                    : {
+                          test: /\.tsx?$/,
+                          use: [
+                              {
+                                  loader: "ts-loader",
+                                  options: {
+                                      transpileOnly: false,
+                                  },
+                              },
+                          ],
+                          exclude: /node_modules/,
+                      },
+                ,
                 {
                     test: /\.(png|jpe?g|gif|webp|avif|svg|mp4)$/i,
                     // More information here https://webpack.js.org/guides/asset-modules/
